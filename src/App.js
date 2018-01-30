@@ -16,7 +16,7 @@ class App extends Component {
   };
 
   async componentDidMount(){
-    const manager = await lottery.methods.manager().call();
+    const manager = await lottery.methods.wsmanager().call();
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
     const nwinner = '';
